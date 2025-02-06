@@ -1,0 +1,21 @@
+/* Solution: Adjust selector specificity to ensure the intended styling is applied. */
+.container {
+  background-color: lightblue; /* Intended general styling */
+}
+
+.container .item {
+  color: blue; /* Specific styling should not override container style */
+}
+
+.container p {
+  font-size: 16px; /* Should apply to all paragraphs within the container */
+}
+
+/*Improved Solution (using more efficient selector):*/
+.container p {
+  font-size: 16px;
+}
+.container .item {
+  color: blue;
+  font-size: 18px;/*This will be more efficient than adding another class for the font-size*/
+}
